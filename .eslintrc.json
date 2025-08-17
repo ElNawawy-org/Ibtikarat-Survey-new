@@ -245,7 +245,6 @@
   },
 
   "overrides": [
-  
     {
       "files": ["**/_fonts/*"],
       "rules": {

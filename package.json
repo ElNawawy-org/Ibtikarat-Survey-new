@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "spell": "cspell lint .",
     "dev": "next dev",
-    "build": "next build",
+    "build:ci": "next build",
+    "build": "npm run spell && next build",
+    "lint": "next lint",
+    "lint:fix": "npx eslint . --fix",
     "start": "next start",
-    "lint": "next lint"
+    "test": "echo 'test success'",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md|ts|tsx)\""
   },
   "dependencies": {
     "cspell": "^9.2.0",
     "next": "15.4.6",
     "next-translate": "^2.6.2",
+    "prettier": "^3.6.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "recharts": "^3.1.2"
