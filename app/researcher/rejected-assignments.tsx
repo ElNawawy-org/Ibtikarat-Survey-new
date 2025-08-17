@@ -1,16 +1,16 @@
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
-import { CardClickable } from 'pages/researcher/_components/card-clickable';
-import { RenderMeta } from 'pages/researcher/_components/render-meta';
-import { callAPI } from 'pages/researcher/_helpers/call-api';
-import { assignmentsQuery } from 'pages/researcher/_gql/rejected-assignments.gql';
-import { PAGE_SIZE } from 'pages/researcher/_data/shared/constants.data';
-import { mapAssignments } from 'pages/researcher/_adapters/mappers/rejected-assignments.map';
+import { CardClickable } from 'app/researcher/_components/card-clickable';
+import { RenderMeta } from 'app/researcher/_components/render-meta';
+import { callAPI } from 'app/researcher/_helpers/call-api';
+import { assignmentsQuery } from 'app/researcher/_gql/rejected-assignments.gql';
+import { PAGE_SIZE } from 'app/researcher/_data/shared/constants.data';
+import { mapAssignments } from 'app/researcher/_adapters/mappers/rejected-assignments.map';
 import {
   TAssignment,
   TAssignmentsResponse,
-} from 'pages/researcher/_types/rejected-assignments.type';
+} from 'app/researcher/_types/rejected-assignments.type';
 import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { Container } from 'packages/container';
 import { Pagination } from 'packages/pagination';

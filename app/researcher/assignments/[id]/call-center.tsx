@@ -2,37 +2,37 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
-import { AssignmentSidebar } from 'pages/researcher/_components/assignment-sidebar';
-import { CardInfo } from 'pages/researcher/_components/card-info';
-import { RenderMeta } from 'pages/researcher/_components/render-meta';
-import { callAPI } from 'pages/researcher/_helpers/call-api';
+import { AssignmentSidebar } from 'app/researcher/_components/assignment-sidebar';
+import { CardInfo } from 'app/researcher/_components/card-info';
+import { RenderMeta } from 'app/researcher/_components/render-meta';
+import { callAPI } from 'app/researcher/_helpers/call-api';
 import {
   assignmentQuery,
   dashboardQuery,
   phonesListQuery,
-} from 'pages/researcher/_gql/assignments/[id]/call-center.gql';
-import { layoutAssignmentQuery } from 'pages/researcher/_gql/assignments/[id]/general-info.gql';
+} from 'app/researcher/_gql/assignments/[id]/call-center.gql';
+import { layoutAssignmentQuery } from 'app/researcher/_gql/assignments/[id]/general-info.gql';
 import {
   CARDS,
   COLUMNS,
-} from 'pages/researcher/_data/assignments/[id]/call-center.data';
-import { TABS } from 'pages/researcher/_data/shared/index.data';
+} from 'app/researcher/_data/assignments/[id]/call-center.data';
+import { TABS } from 'app/researcher/_data/shared/index.data';
 import {
   mapAssignment,
   mapDashboard,
-} from 'pages/researcher/_adapters/mappers/assignments/[id]/call-center.map';
-import { mapLayoutAssignment } from 'pages/researcher/_adapters/mappers/assignments/[id]/general-info.map';
-import { E_CALL_CENTER_STATUSES } from 'pages/researcher/_enums/assignments/[id]/call-center.enum';
+} from 'app/researcher/_adapters/mappers/assignments/[id]/call-center.map';
+import { mapLayoutAssignment } from 'app/researcher/_adapters/mappers/assignments/[id]/general-info.map';
+import { E_CALL_CENTER_STATUSES } from 'app/researcher/_enums/assignments/[id]/call-center.enum';
 import {
   TAssignment,
   TAssignmentResponse,
   TDashboard,
   TPhoneNumberResponse,
-} from 'pages/researcher/_types/assignments/[id]/call-center.type';
+} from 'app/researcher/_types/assignments/[id]/call-center.type';
 import {
   TLayoutAssignment,
   TLayoutAssignmentResponse,
-} from 'pages/researcher/_types/assignments/[id]/general-info.type';
+} from 'app/researcher/_types/assignments/[id]/general-info.type';
 import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { BreadCrumb } from 'packages/bread-crumb';
 import { Container } from 'packages/container';

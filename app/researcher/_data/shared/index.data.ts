@@ -1,6 +1,6 @@
-import { EyeIcon } from 'pages/researcher/_assets/icons/eye-icon';
-import { OverviewIcon } from 'pages/researcher/_assets/icons/overview-icon';
-import { TTabsParams } from 'pages/researcher/_types/shared.type';
+import { EyeIcon } from 'app/researcher/_assets/icons/eye-icon';
+import { OverviewIcon } from 'app/researcher/_assets/icons/overview-icon';
+import { TTabsParams } from 'app/researcher/_types/shared.type';
 import { TTab } from 'packages/tabs/type';
 
 type T_TABS = (params: TTabsParams) => TTab[];

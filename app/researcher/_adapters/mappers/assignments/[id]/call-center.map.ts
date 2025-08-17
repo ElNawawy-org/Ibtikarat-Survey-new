@@ -1,10 +1,10 @@
-import { E_CALL_CENTER_STATUSES } from 'pages/researcher/_enums/assignments/[id]/call-center.enum';
+import { E_CALL_CENTER_STATUSES } from 'app/researcher/_enums/assignments/[id]/call-center.enum';
 import {
   TAssignment,
   TAssignmentResponse,
   TDashboard,
   TDashboardResponse,
-} from 'pages/researcher/_types/assignments/[id]/call-center.type';
+} from 'app/researcher/_types/assignments/[id]/call-center.type';
 
 type TMapAssignment = (assignment: TAssignmentResponse) => TAssignment;
 type TMapDashboard = (Dashboard: TDashboardResponse) => TDashboard;

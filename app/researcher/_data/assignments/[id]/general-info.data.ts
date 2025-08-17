@@ -1,4 +1,4 @@
-import { T_CARDS } from 'pages/researcher/_types/assignments/[id]/general-info.type';
+import { T_CARDS } from 'app/researcher/_types/assignments/[id]/general-info.type';
 
 const CARDS: T_CARDS = ({
   data: { responses, rejectedResponses, progressPercentage, profit },

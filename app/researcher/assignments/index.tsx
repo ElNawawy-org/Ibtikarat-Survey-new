@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
-import { CardClickableDetailed } from 'pages/researcher/_components/card-clickable-detailed';
-import { RenderMeta } from 'pages/researcher/_components/render-meta';
-import { callAPI } from 'pages/researcher/_helpers/call-api';
-import { assignmentsQuery } from 'pages/researcher/_gql/assignments/index.gql';
-import { PAGE_SIZE } from 'pages/researcher/_data/shared/constants.data';
-import { mapAssignments } from 'pages/researcher/_adapters/mappers/assignments/index.map';
-import { FilterIcon } from 'pages/researcher/_assets/icons/filter-icon';
+import { CardClickableDetailed } from 'app/researcher/_components/card-clickable-detailed';
+import { RenderMeta } from 'app/researcher/_components/render-meta';
+import { callAPI } from 'app/researcher/_helpers/call-api';
+import { assignmentsQuery } from 'app/researcher/_gql/assignments/index.gql';
+import { PAGE_SIZE } from 'app/researcher/_data/shared/constants.data';
+import { mapAssignments } from 'app/researcher/_adapters/mappers/assignments/index.map';
+import { FilterIcon } from 'app/researcher/_assets/icons/filter-icon';
 import {
   TAssignmentsResponse,
   TAssignment,
-} from 'pages/researcher/_types/assignments/index.type';
+} from 'app/researcher/_types/assignments/index.type';
 import OrdersDatePickers from '@components/shared/orders-date-pickers'; //TODO-convert-to-package: Remove
 import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { Container } from 'packages/container';

@@ -1,6 +1,6 @@
 import { JSX } from 'react';
-import { E_CALL_CENTER_STATUSES } from 'pages/researcher/_enums/assignments/[id]/call-center.enum';
-import { TTrans } from 'pages/researcher/_types/shared.type';
+import { E_CALL_CENTER_STATUSES } from 'app/researcher/_enums/assignments/[id]/call-center.enum';
+import { TTrans } from 'app/researcher/_types/shared.type';
 import { TColumn } from 'packages/simple-table/type';
 
 const {

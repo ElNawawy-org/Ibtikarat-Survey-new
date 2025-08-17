@@ -1,9 +1,9 @@
-import { CloseCircleIcon } from 'pages/researcher/_assets/icons/close-circle-icon';
-import { ShieldIcon } from 'pages/researcher/_assets/icons/shield-icon';
-import { ShieldTimeIcon } from 'pages/researcher/_assets/icons/shield-time-icon';
-import { SurveyIcon } from 'pages/researcher/_assets/icons/survey-icon';
-import { TCard, TCardsParams } from 'pages/researcher/_types/index.type';
-import { TTrans } from 'pages/researcher/_types/shared.type';
+import { CloseCircleIcon } from 'app/researcher/_assets/icons/close-circle-icon';
+import { ShieldIcon } from 'app/researcher/_assets/icons/shield-icon';
+import { ShieldTimeIcon } from 'app/researcher/_assets/icons/shield-time-icon';
+import { SurveyIcon } from 'app/researcher/_assets/icons/survey-icon';
+import { TCard, TCardsParams } from 'app/researcher/_types/index.type';
+import { TTrans } from 'app/researcher/_types/shared.type';
 import { TColumn } from 'packages/simple-table/type';
 
 type T_COLUMNS = (trans: TTrans) => TColumn[];

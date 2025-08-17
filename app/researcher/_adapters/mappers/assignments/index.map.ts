@@ -1,8 +1,8 @@
-import { E_ASSIGNMENT_STATUSES } from 'pages/researcher/_enums/assignments/index.enum';
+import { E_ASSIGNMENT_STATUSES } from 'app/researcher/_enums/assignments/index.enum';
 import {
   TAssignment,
   TAssignmentResponse,
-} from 'pages/researcher/_types/assignments/index.type';
+} from 'app/researcher/_types/assignments/index.type';
 
 type TMapAssignments = (assignments: TAssignmentResponse[]) => TAssignment[];
 

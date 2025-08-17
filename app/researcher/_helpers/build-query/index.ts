@@ -1,4 +1,4 @@
-import { pageInfo } from 'pages/researcher/_gql/shared.gql';
+import { pageInfo } from 'app/researcher/_gql/shared.gql';
 import { TBuildQuery } from './type';
 
 export const buildQuery: TBuildQuery = ({

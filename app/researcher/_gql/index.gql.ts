@@ -1,4 +1,4 @@
-import { buildQuery } from 'pages/researcher/_helpers/build-query';
+import { buildQuery } from 'app/researcher/_helpers/build-query';
 
 export const researcherQuery = buildQuery({
   root: 'researcherDashboard',

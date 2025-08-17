@@ -2,28 +2,28 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
-import { AssignmentSidebar } from 'pages/researcher/_components/assignment-sidebar';
-import { RenderMeta } from 'pages/researcher/_components/render-meta';
-import { callAPI } from 'pages/researcher/_helpers/call-api';
+import { AssignmentSidebar } from 'app/researcher/_components/assignment-sidebar';
+import { RenderMeta } from 'app/researcher/_components/render-meta';
+import { callAPI } from 'app/researcher/_helpers/call-api';
 import {
   assignmentQuery,
   draftAnswersQuery,
-} from 'pages/researcher/_gql/assignments/[id]/draft-answers.gql';
-import { layoutAssignmentQuery } from 'pages/researcher/_gql/assignments/[id]/general-info.gql';
-import { COLUMNS } from 'pages/researcher/_data/assignments/[id]/draft-answers.data';
-import { TABS } from 'pages/researcher/_data/shared/index.data';
-import { mapAssignment } from 'pages/researcher/_adapters/mappers/assignments/[id]/draft-answers.map';
-import { mapLayoutAssignment } from 'pages/researcher/_adapters/mappers/assignments/[id]/general-info.map';
+} from 'app/researcher/_gql/assignments/[id]/draft-answers.gql';
+import { layoutAssignmentQuery } from 'app/researcher/_gql/assignments/[id]/general-info.gql';
+import { COLUMNS } from 'app/researcher/_data/assignments/[id]/draft-answers.data';
+import { TABS } from 'app/researcher/_data/shared/index.data';
+import { mapAssignment } from 'app/researcher/_adapters/mappers/assignments/[id]/draft-answers.map';
+import { mapLayoutAssignment } from 'app/researcher/_adapters/mappers/assignments/[id]/general-info.map';
 import {
   TAssignment,
   TAssignmentResponse,
   TDraftAnswer,
   TDraftAnswerResponse,
-} from 'pages/researcher/_types/assignments/[id]/draft-answers.type';
+} from 'app/researcher/_types/assignments/[id]/draft-answers.type';
 import {
   TLayoutAssignment,
   TLayoutAssignmentResponse,
-} from 'pages/researcher/_types/assignments/[id]/general-info.type';
+} from 'app/researcher/_types/assignments/[id]/general-info.type';
 import { useDispatch } from '@util/noval';
 import { BreadCrumb } from 'packages/bread-crumb';
 import { Container } from 'packages/container';

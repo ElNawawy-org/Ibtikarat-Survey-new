@@ -29,13 +29,13 @@
 
 import Link from 'next/link';
 import { FC } from 'react';
-import { AwardIcon } from 'pages/researcher/_assets/icons/award-icon';
-import { ClipboardIcon } from 'pages/researcher/_assets/icons/clipboard-icon';
-import { DocumentIcon } from 'pages/researcher/_assets/icons/document-icon';
-import { MoneyIcon } from 'pages/researcher/_assets/icons/money-icon';
-import { RejectedIcon } from 'pages/researcher/_assets/icons/rejected-icon';
-import { TimerIcon } from 'pages/researcher/_assets/icons/timer-icon';
-import { E_ASSIGNMENT_STATUSES } from 'pages/researcher/_enums/assignments/index.enum';
+import { AwardIcon } from 'app/researcher/_assets/icons/award-icon';
+import { ClipboardIcon } from 'app/researcher/_assets/icons/clipboard-icon';
+import { DocumentIcon } from 'app/researcher/_assets/icons/document-icon';
+import { MoneyIcon } from 'app/researcher/_assets/icons/money-icon';
+import { RejectedIcon } from 'app/researcher/_assets/icons/rejected-icon';
+import { TimerIcon } from 'app/researcher/_assets/icons/timer-icon';
+import { E_ASSIGNMENT_STATUSES } from 'app/researcher/_enums/assignments/index.enum';
 import { TProps } from './type';
 import { ProgressBar } from 'packages/progress-bar';
 

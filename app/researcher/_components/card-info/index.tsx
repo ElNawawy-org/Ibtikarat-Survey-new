@@ -20,7 +20,7 @@
  */
 
 import { FC } from 'react';
-import { InfoIcon } from 'pages/researcher/_assets/icons/info-icon';
+import { InfoIcon } from 'app/researcher/_assets/icons/info-icon';
 import { TProps } from './type';
 
 export const CardInfo: FC<TProps> = ({

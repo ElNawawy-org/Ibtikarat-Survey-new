@@ -1,5 +1,5 @@
-import { buildQuery } from 'pages/researcher/_helpers/build-query';
-import { assignmentId, orderId } from 'pages/researcher/_gql/shared.gql';
+import { buildQuery } from 'app/researcher/_helpers/build-query';
+import { assignmentId, orderId } from 'app/researcher/_gql/shared.gql';
 
 const assignmentQuery = buildQuery({
   root: 'assignmentByOrder',

@@ -1,4 +1,4 @@
-import { TTrans } from 'pages/researcher/_types/shared.type';
+import { TTrans } from 'app/researcher/_types/shared.type';
 
 type TLayoutAssignmentResponse = {
   id: string;

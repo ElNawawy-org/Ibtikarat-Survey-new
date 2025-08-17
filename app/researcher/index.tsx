@@ -2,17 +2,17 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
-import { CardClickable2 } from 'pages/researcher/_components/card-clickable-2';
-import { RenderMeta } from 'pages/researcher/_components/render-meta';
-import { callAPI } from 'pages/researcher/_helpers/call-api';
-import { researcherQuery } from 'pages/researcher/_gql/index.gql';
-import { CARDS, COLUMNS } from 'pages/researcher/_data/index.data';
-import { mapAssignments } from 'pages/researcher/_adapters/mappers/index.map';
+import { CardClickable2 } from 'app/researcher/_components/card-clickable-2';
+import { RenderMeta } from 'app/researcher/_components/render-meta';
+import { callAPI } from 'app/researcher/_helpers/call-api';
+import { researcherQuery } from 'app/researcher/_gql/index.gql';
+import { CARDS, COLUMNS } from 'app/researcher/_data/index.data';
+import { mapAssignments } from 'app/researcher/_adapters/mappers/index.map';
 import {
   TAssignment,
   TAssignmentsResponse,
   TDashboard,
-} from 'pages/researcher/_types/index.type';
+} from 'app/researcher/_types/index.type';
 import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { Container } from 'packages/container';
 import { ProgressCircular } from 'packages/progress-circular';

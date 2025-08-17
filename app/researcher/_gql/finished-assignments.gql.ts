@@ -1,5 +1,5 @@
-import { buildQuery } from 'pages/researcher/_helpers/build-query';
-import { page, size } from 'pages/researcher/_gql/shared.gql';
+import { buildQuery } from 'app/researcher/_helpers/build-query';
+import { page, size } from 'app/researcher/_gql/shared.gql';
 
 export const assignmentsQuery = buildQuery({
   root: 'myFinishedAssignments',

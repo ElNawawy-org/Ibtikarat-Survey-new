@@ -1,7 +1,7 @@
 import {
   TAssignment,
   TAssignmentResponse,
-} from 'pages/researcher/_types/finished-assignments.type';
+} from 'app/researcher/_types/finished-assignments.type';
 
 type TMapAssignments = (assignments: TAssignmentResponse[]) => TAssignment[];
 

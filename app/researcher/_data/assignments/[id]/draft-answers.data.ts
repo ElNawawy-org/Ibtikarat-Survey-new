@@ -1,4 +1,4 @@
-import { T_COLUMNS } from 'pages/researcher/_types/assignments/[id]/draft-answers.type';
+import { T_COLUMNS } from 'app/researcher/_types/assignments/[id]/draft-answers.type';
 
 const COLUMNS: T_COLUMNS = ({ trans }) => [
   { id: '1', header: trans('supervisor.tables.id'), accessor: 'id' },

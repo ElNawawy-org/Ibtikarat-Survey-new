@@ -1,11 +1,11 @@
-import { ClosedIcon } from 'pages/researcher/_assets/icons/closed-icon';
-import { DotsHorizontalIcon } from 'pages/researcher/_assets/icons/dots-horizontal-icon';
-import { EditIcon } from 'pages/researcher/_assets/icons/edit-icon';
-import { E_CALL_CENTER_STATUSES } from 'pages/researcher/_enums/assignments/[id]/call-center.enum';
+import { ClosedIcon } from 'app/researcher/_assets/icons/closed-icon';
+import { DotsHorizontalIcon } from 'app/researcher/_assets/icons/dots-horizontal-icon';
+import { EditIcon } from 'app/researcher/_assets/icons/edit-icon';
+import { E_CALL_CENTER_STATUSES } from 'app/researcher/_enums/assignments/[id]/call-center.enum';
 import {
   T_CARDS,
   T_COLUMNS,
-} from 'pages/researcher/_types/assignments/[id]/call-center.type';
+} from 'app/researcher/_types/assignments/[id]/call-center.type';
 
 const {
   E_NO_RESPONSE,

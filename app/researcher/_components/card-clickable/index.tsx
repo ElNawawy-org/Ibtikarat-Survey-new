@@ -25,8 +25,8 @@
 
 import Link from 'next/link';
 import { FC } from 'react';
-import { ClipboardIcon } from 'pages/researcher/_assets/icons/clipboard-icon';
-import { DocumentIcon } from 'pages/researcher/_assets/icons/document-icon';
+import { ClipboardIcon } from 'app/researcher/_assets/icons/clipboard-icon';
+import { DocumentIcon } from 'app/researcher/_assets/icons/document-icon';
 import { TProps } from './type';
 
 export const CardClickable: FC<TProps> = ({ href, title, quantity, trans }) => {

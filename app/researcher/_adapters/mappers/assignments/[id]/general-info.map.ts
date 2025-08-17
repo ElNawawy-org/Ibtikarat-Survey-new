@@ -4,8 +4,8 @@ import {
   TLayoutAssignment,
   TLayoutAssignmentResponse,
   TResearcherPerformanceResponse,
-} from 'pages/researcher/_types/assignments/[id]/general-info.type';
-import { TTrans } from 'pages/researcher/_types/shared.type';
+} from 'app/researcher/_types/assignments/[id]/general-info.type';
+import { TTrans } from 'app/researcher/_types/shared.type';
 
 //TODO-typescript: move these types to a separate file
 type TMapLayoutAssignment = (

@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { TTrans } from 'pages/researcher/_types/shared.type';
+import { TTrans } from 'app/researcher/_types/shared.type';
 import { TColumn } from 'packages/simple-table/type';
 
 type TAssignmentResponse = {

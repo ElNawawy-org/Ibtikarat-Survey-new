@@ -1,9 +1,9 @@
-import { DollarSquareIcon } from 'pages/researcher/_assets/icons/dollar-square-icon';
-import { SurveyIcon } from 'pages/researcher/_assets/icons/survey-icon';
+import { DollarSquareIcon } from 'app/researcher/_assets/icons/dollar-square-icon';
+import { SurveyIcon } from 'app/researcher/_assets/icons/survey-icon';
 import {
   T_CARDS,
   T_COLUMNS,
-} from 'pages/researcher/_types/assignments/[id]/targeted-category.type';
+} from 'app/researcher/_types/assignments/[id]/targeted-category.type';
 
 const CARDS: T_CARDS = ({ data, trans }) => [
   {

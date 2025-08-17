@@ -1,4 +1,4 @@
-import { buildQuery } from 'pages/researcher/_helpers/build-query';
+import { buildQuery } from 'app/researcher/_helpers/build-query';
 import {
   assignmentType,
   page,
@@ -7,7 +7,7 @@ import {
   startDate,
   endDate,
   status,
-} from 'pages/researcher/_gql/shared.gql';
+} from 'app/researcher/_gql/shared.gql';
 
 export const assignmentsQuery = buildQuery({
   root: 'assignmentsByType',

@@ -2,7 +2,7 @@ import {
   TAssignment,
   TAssignmentResponse,
   TTargetAudience,
-} from 'pages/researcher/_types/assignments/[id]/targeted-category.type';
+} from 'app/researcher/_types/assignments/[id]/targeted-category.type';
 
 type TMapAssignment = (assignment: TAssignmentResponse) => TAssignment;
 type TMapTargetAudience = (data: number) => TTargetAudience;
