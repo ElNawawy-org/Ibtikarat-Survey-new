@@ -1,0 +1,24 @@
+{
+  //Global ignored words
+  "ignoreWords": [
+    "Parens",
+    "webp",
+    "Xlink",
+    "SCREAMCASE",
+    "camelcase",
+    "elnawawy"
+  ],
+  //To ignore Arabic errors
+  "ignoreRegExpList": ["/[\\u0621-\\u064A]+/"],
+  //This project ignored words
+  "words": [
+
+  
+  ],
+  //This project ignored paths
+  "ignorePaths": [
+    "**/vocab.json",
+    "**/_dummy",
+    "**/_gql/**/*.json",
+  ]
+}

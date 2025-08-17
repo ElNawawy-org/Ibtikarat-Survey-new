@@ -1,0 +1,263 @@
+{
+  "env": {
+    "browser": true, // Add this to enable browser globals
+    "es6": true
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+
+  "plugins": ["react-hooks", "react", "import"],
+
+  "globals": {
+    "JSX": true
+  },
+
+  "rules": {
+    "import/no-unresolved": 2, // Fail on unresolved modules
+
+    "import/named": 2, // Fail on incorrect named imports
+
+    "import/default": 2, // Fail if default import is invalid
+
+    //Reports if a resolved path is imported more than once
+    "import/no-duplicates": 2, //old
+
+    //Forbid using mutable values to be exported (var or let)
+    "import/no-mutable-exports": 2,
+
+    //Forbid importing default that has the same name as a named export
+    "import/no-named-as-default": 2,
+
+    //Force all exports to be in a group
+    "import/group-exports": 2,
+
+    //Force all exports to be at the end of the file
+    "import/exports-last": 2,
+
+    //Force inserting new line after imports
+    "import/newline-after-import": 2,
+
+    //Forbid using anonymous default export
+    "import/no-anonymous-default-export": 2,
+
+    //Forbid using default export
+    "import/no-default-export": 2,
+
+    //Forbid importing a named exported value as a default
+    "import/no-named-default": 2,
+
+    //Enforce a convention of not using namespace (a.k.a. "wildcard" *) imports.
+    "import/no-namespace": 2,
+
+    //Forbid using this: import 'fileName'
+    "import/no-unassigned-import": 2,
+
+    //Forbid using console
+    "no-console": [
+      //old
+      2,
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+
+    "no-debugger": 2,
+
+    "no-alert": 2,
+
+    //Forbid using the var keyword
+    "no-var": 2, //old
+
+    //Forbid using undefined variable
+    "no-undef": 2, //old
+
+    //Forbid unused variables
+    "@typescript-eslint/no-unused-vars": [
+      //old
+      2,
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+
+    //Forbid to name a hook without "use" prefix
+    "react-hooks/rules-of-hooks": 2,
+
+    "camelcase": 2,
+
+    //Force ordering the imports
+    "import/order": [
+      2,
+      {
+        "alphabetize": {
+          "order": "asc"
+        },
+
+        "newlines-between": "never",
+
+        "pathGroups": [
+          {
+            "pattern": "**/_atoms/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_molecules/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_organisms/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_components/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_templates/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_context/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_helpers/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_hooks/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_validation/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_gql/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_api",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_locales/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_data/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_dummy/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_adapters/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_assets/icons/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_assets/svg/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_assets/images/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_fonts",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_enums/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "**/_types/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "./type",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "./style.module.css",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "./style",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "globals.css",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "public/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ]
+  },
+
+  "overrides": [
+  
+    {
+      "files": ["**/_fonts/*"],
+      "rules": {
+        "camelcase": 0
+      }
+    },
+    {
+      "files": ["*.page.*"],
+      "rules": {
+        //Forbid using default export
+        "import/no-default-export": 0
+      }
+    }
+  ]
+}
