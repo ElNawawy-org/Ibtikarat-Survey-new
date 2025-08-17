@@ -150,7 +150,7 @@ const Assignments = () => {
             label={t('common.select.viewByStatus')}
           />
 
-          <OrdersDatePickers selector='operatorOrdersFilteration.filters' />
+          <OrdersDatePickers selector='operatorOrders.filters' />
         </div>
 
         <div className='grid gap-8 md:grid-cols-2 xl:grid-cols-3'>

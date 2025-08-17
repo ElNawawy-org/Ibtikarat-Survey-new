@@ -4,7 +4,6 @@
   "semi": true,
   "arrowParens": "avoid",
   "printWidth": 80,
-
   "bracketSpacing": true,
   "bracketSameLine": false,
   "singleAttributePerLine": true,
