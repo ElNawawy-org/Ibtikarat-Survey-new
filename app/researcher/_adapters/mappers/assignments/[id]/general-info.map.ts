@@ -51,12 +51,7 @@ const mapAssignment: TMapAssignment = ({
   researcherPerformance,
   trans,
 }) => {
-  const {
-    quantity,
-    price,
-    status,
-    order
-  } = assignment;
+  const { quantity, price, status, order } = assignment;
 
   const survey = order?.survey;
   const { responses, rejectedResponses, responseByDay, responseByHour } =
