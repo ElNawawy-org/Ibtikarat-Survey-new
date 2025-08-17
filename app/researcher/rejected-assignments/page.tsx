@@ -1,19 +1,20 @@
+'use client';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
 import { CardClickable } from 'app/researcher/_components/card-clickable';
 import { RenderMeta } from 'app/researcher/_components/render-meta';
 import { callAPI } from 'app/researcher/_helpers/call-api';
-import { assignmentsQuery } from 'app/researcher/_gql/finished-assignments.gql';
+import { assignmentsQuery } from 'app/researcher/_gql/rejected-assignments.gql';
 import { PAGE_SIZE } from 'app/researcher/_data/shared/constants.data';
-import { mapAssignments } from 'app/researcher/_adapters/mappers/finished-assignments.map';
+import { mapAssignments } from 'app/researcher/_adapters/mappers/rejected-assignments.map';
 import {
   TAssignment,
   TAssignmentsResponse,
-} from 'app/researcher/_types/finished-assignments.type';
+} from 'app/researcher/_types/rejected-assignments.type';
 import { Container } from 'packages/container';
 import { Pagination } from 'packages/pagination';
 
-const FinishedAssignments = () => {
+const RejectedAssignments = () => {
   // Start Hooks
   const { t } = useTranslation('common');
 
@@ -39,11 +40,11 @@ const FinishedAssignments = () => {
     });
 
     const assignments = mapAssignments(
-      data?.myFinishedAssignments?.assignments || []
+      data?.myRejectedAssignments?.assignments || []
     );
 
     setAssignments(assignments);
-    setNumberOfPages(data?.myFinishedAssignments?.pageInfo?.totalPages);
+    setNumberOfPages(data?.myRejectedAssignments?.pageInfo?.totalPages);
   }, [CurrentPage]);
 
   useEffect(() => {
@@ -71,11 +72,11 @@ const FinishedAssignments = () => {
     // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
-      <RenderMeta title={t('researcher.finishedAssignments')} />
+      <RenderMeta title={t('researcher.rejectedAssignments')} />
 
       <section className='grid gap-8'>
         <h1 className='capitalize text-lg 2xl:text-2xl font-bold'>
-          {t('researcher.finishedAssignments')}
+          {t('researcher.rejectedAssignments')}
         </h1>
 
         <div className='grid gap-8 md:grid-cols-2 xl:grid-cols-3'>
@@ -96,4 +97,4 @@ const FinishedAssignments = () => {
   );
 };
 
-export default FinishedAssignments;
+export default RejectedAssignments;

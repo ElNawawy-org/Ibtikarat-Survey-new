@@ -1,3 +1,4 @@
+'use client';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
 import { CardClickableDetailed } from 'app/researcher/_components/card-clickable-detailed';
