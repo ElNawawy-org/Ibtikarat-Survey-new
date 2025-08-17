@@ -1,0 +1,79 @@
+{
+  "assignmentsByType": {
+    "assignments": [
+      {
+        "id": "2362",
+        "quantity": 10,
+        "price": 3000,
+        "responses": 0,
+        "status": "IN_PROGRESS",
+        "order": {
+          "id": "50",
+          "survey": {
+            "surveyName": "02-03/07/2025",
+            "uniqueUrl": "HQ6-pVLrQ9Cx4VYfbeiukuPefxq-xSOZJE0crtfb36Y"
+          }
+        }
+      },
+      {
+        "id": "2360",
+        "quantity": 10,
+        "price": 300,
+        "responses": 0,
+        "status": "REJECTED",
+        "order": {
+          "id": "55",
+          "survey": {
+            "surveyName": "استطلاع رضا الموظفين حول بيئة العمل والتطوير المهني والتوازن بين العمل والحياة",
+            "uniqueUrl": "e2l1ljD4afJyOHX4c5Nf7SnS0SsQ73Y8HDO44ABMtAU"
+          }
+        }
+      },
+      {
+        "id": "2359",
+        "quantity": 1,
+        "price": 1,
+        "responses": 1,
+        "status": "IN_PROGRESS",
+        "order": {
+          "id": "46",
+          "survey": {
+            "surveyName": "01-02/07/2025",
+            "uniqueUrl": "jSe6N8XYEBBrVfP9bNs1hCAH6IdUGEv8DmA1-bzt5jM"
+          }
+        }
+      },
+      {
+        "id": "2340",
+        "quantity": 1,
+        "price": 1,
+        "responses": 1,
+        "status": "IN_PROGRESS",
+        "order": {
+          "id": "45",
+          "survey": {
+            "surveyName": "01-01/07/2025",
+            "uniqueUrl": "ZWYjDjo843dMG7x8GLWQrg9Fe7zVEekOPn3KKgLnrdw"
+          }
+        }
+      },
+      {
+        "id": "2337",
+        "quantity": 1,
+        "price": 1,
+        "responses": 0,
+        "status": "IN_PROGRESS",
+        "order": {
+          "id": "42",
+          "survey": {
+            "surveyName": "استطلاع البيئة – 2025",
+            "uniqueUrl": "MDi_tXW-5qDmGUXv-HhINbsscgY05Cc0Z4wIOZS38Bg"
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "totalPages": 1
+    }
+  }
+}

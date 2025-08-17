@@ -1,0 +1,32 @@
+import { buildQuery } from 'pages/researcher/_helpers/build-query';
+import { assignmentId, orderId } from 'pages/researcher/_gql/shared.gql';
+
+const assignmentQuery = buildQuery({
+  root: 'assignmentByOrder',
+  params: [orderId],
+  fields: `
+    order {
+      survey {
+        surveyName
+      }
+    }
+  `,
+});
+
+const draftAnswersQuery = buildQuery({
+  root: 'draftResponses',
+  params: [assignmentId],
+  fields: `
+    id
+    responseJson
+  `,
+});
+
+export { assignmentQuery, draftAnswersQuery };
+
+//TODO-After Migration to app router- remove the following
+export default function xyz() {}
+/*
+Why?
+because in the page router (the current router) it is required to have a default export
+*/

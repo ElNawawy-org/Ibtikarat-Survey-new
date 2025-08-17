@@ -1,0 +1,60 @@
+export const DocumentIcon = () => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='20.082'
+      height='24'
+      viewBox='0 0 20.082 24'
+      fill='var(--primary)'
+    >
+      <g
+        id='Group_499'
+        data-name='Group 499'
+        transform='translate(118.231 -359.102) rotate(180)'
+      >
+        <path
+          id='Path_1704'
+          data-name='Path 1704'
+          d='M78.5-184.5V-164.5a2,2,0,0,0,2,2H93.367a.436.436,0,0,0,.283-.117l4.814-4.8a.363.363,0,0,0,.118-.281V-184.5a2,2,0,0,0-2-2H80.5A2,2,0,0,0,78.5-184.5Zm15.267,20.625V-166.1a1.206,1.206,0,0,1,1.2-1.207h2.248ZM97.781-184.5V-168.1H94.968a2.023,2.023,0,0,0-2.013,2v2.8H80.5a1.206,1.206,0,0,1-1.2-1.207V-184.5a1.206,1.206,0,0,1,1.2-1.207H96.581A1.206,1.206,0,0,1,97.781-184.5Z'
+          transform='translate(19.649 -196.602)'
+          fillRule='evenodd'
+        />
+        <path
+          id='Path_1707'
+          data-name='Path 1707'
+          d='M81.542-180.793H82.6c.294,0,.527-.156.527-.354s-.232-.354-.527-.354H81.542c-.294,0-.542.156-.542.354S81.248-180.793,81.542-180.793Z'
+          transform='translate(20.686 -196.749)'
+          fillRule='evenodd'
+        />
+        <path
+          id='Path_1708'
+          data-name='Path 1708'
+          d='M83.708-180.793h4.806c.116,0,.214-.156.214-.354s-.1-.354-.214-.354H83.708c-.11,0-.208.156-.208.354S83.6-180.793,83.708-180.793Z'
+          transform='translate(21.723 -196.749)'
+          fillRule='evenodd'
+        />
+        <path
+          id='Path_1709'
+          data-name='Path 1709'
+          d='M81.542-178.293H82.6c.294,0,.527-.164.527-.349S82.89-179,82.6-179H81.542c-.294,0-.542.164-.542.359S81.248-178.293,81.542-178.293Z'
+          transform='translate(20.686 -196.823)'
+          fillRule='evenodd'
+        />
+        <path
+          id='Path_1710'
+          data-name='Path 1710'
+          d='M84.087-178.293h9.437c.311,0,.587-.164.587-.349s-.276-.359-.587-.359H84.087c-.311,0-.587.164-.587.359S83.776-178.293,84.087-178.293Z'
+          transform='translate(18.292 -196.823)'
+          fillRule='evenodd'
+        />
+      </g>
+    </svg>
+  );
+};
+
+//TODO-After Migration to app router- remove the following
+export default function xyz() {}
+/*
+Why?
+because in the page router (the current router) it is required to have a default export
+*/

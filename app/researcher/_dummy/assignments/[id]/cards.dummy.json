@@ -1,0 +1,139 @@
+{
+  "responsePerformanceResearcher": {
+    "responses": 8,
+    "answerAvgTime": 7,
+    "latestResponseTime": "2025-05-20T12:29:57.325542Z",
+    "rejectedResponses": 0,
+    "rejectionNotes": null,
+    "responseByDay": [
+      {
+        "dayOfWeek": "MONDAY",
+        "responseCount": "0"
+      },
+      {
+        "dayOfWeek": "TUESDAY",
+        "responseCount": "2"
+      },
+      {
+        "dayOfWeek": "WEDNESDAY",
+        "responseCount": "4"
+      },
+      {
+        "dayOfWeek": "THURSDAY",
+        "responseCount": "0"
+      },
+      {
+        "dayOfWeek": "FRIDAY",
+        "responseCount": "0"
+      },
+      {
+        "dayOfWeek": "SATURDAY",
+        "responseCount": "0"
+      },
+      {
+        "dayOfWeek": "SUNDAY",
+        "responseCount": "0"
+      }
+    ],
+    "responseByHour": [
+      {
+        "hourOfDay": "1",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "2",
+        "responseCount": "2"
+      },
+      {
+        "hourOfDay": "3",
+        "responseCount": "1"
+      },
+      {
+        "hourOfDay": "4",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "5",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "6",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "7",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "8",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "9",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "10",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "11",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "12",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "13",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "14",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "15",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "16",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "17",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "18",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "19",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "20",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "21",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "22",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "23",
+        "responseCount": "0"
+      },
+      {
+        "hourOfDay": "24",
+        "responseCount": "0"
+      }
+    ],
+    "location": [],
+    "callCenterStatistic": null
+  }
+}

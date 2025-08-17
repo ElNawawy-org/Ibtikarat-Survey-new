@@ -1,0 +1,52 @@
+{
+  "myFinishedAssignments": {
+    "assignments": [
+      {
+        "quantity": 10,
+        "order": {
+          "id": "86",
+          "createdDate": "2025-04-13T07:21:27.259447Z",
+          "survey": {
+            "surveyName": "01-13/04/2025"
+          }
+        }
+      },
+      {
+        "quantity": 5,
+        "order": {
+          "id": "29",
+          "createdDate": "2024-10-06T09:58:17.559354Z",
+          "survey": {
+            "surveyName": "استطلاع الميول المهني"
+          }
+        }
+      },
+      {
+        "quantity": 5,
+        "order": {
+          "id": "24",
+          "createdDate": "2024-10-06T08:35:18.013076Z",
+          "survey": {
+            "surveyName": "طلب عبدالرحمن"
+          }
+        }
+      },
+      {
+        "quantity": 14,
+        "order": {
+          "id": "16",
+          "createdDate": "2024-08-15T13:23:42.017112Z",
+          "survey": {
+            "surveyName": "استطلاع رأي حول الترفيه"
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNext": false,
+      "currentPage": 0,
+      "totalPages": 1,
+      "totalElements": 4
+    }
+  }
+}
