@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
 import { CardClickable } from 'app/researcher/_components/card-clickable';
@@ -11,36 +10,21 @@ import {
   TAssignment,
   TAssignmentsResponse,
 } from 'app/researcher/_types/rejected-assignments.type';
-import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { Container } from 'packages/container';
 import { Pagination } from 'packages/pagination';
 
 const RejectedAssignments = () => {
-  //Start Hooks
+  // Start Hooks
   const { t } = useTranslation('common');
-  const { push } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+
   const [Assignments, setAssignments] = useState<TAssignment[]>();
   const [CurrentPage, setCurrentPage] = useState<number>(1);
   const [NumberOfPages, setNumberOfPages] = useState<number>(1);
-  //End Hooks
+  // End Hooks
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const data: TAssignmentsResponse = await callAPI({
       body: {
@@ -60,16 +44,14 @@ const RejectedAssignments = () => {
 
     setAssignments(assignments);
     setNumberOfPages(data?.myRejectedAssignments?.pageInfo?.totalPages);
-  }, [activeToken, CurrentPage]);
+  }, [CurrentPage]);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [CurrentPage]);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const cardsList = Assignments?.map(
     ({ id, surveyName, numberOfRequiredAnswers }) => {
       return (
@@ -83,10 +65,10 @@ const RejectedAssignments = () => {
       );
     }
   );
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.rejectedAssignments')} />

@@ -33,7 +33,6 @@ import {
   TLayoutAssignment,
   TLayoutAssignmentResponse,
 } from 'app/researcher/_types/assignments/[id]/general-info.type';
-import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { BreadCrumb } from 'packages/bread-crumb';
 import { Container } from 'packages/container';
 import { SidebarToggleLayout } from 'packages/sidebar-toggle-layout';
@@ -91,21 +90,19 @@ const dashboardInit = {
 const phonesListInit: TPhoneNumberResponse[] = [];
 
 const CallCenter = () => {
-  //Start Hooks
+  // Start Hooks
   const { t, lang } = useTranslation('common');
-  const { push, query } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+  const { query } = useRouter();
+
   const [LayoutAssignment, setLayoutAssignment] =
     useState<TLayoutAssignment>(layoutAssignmentInit);
   const [Assignment, setAssignment] = useState<TAssignment>(assignmentInit);
   const [Dashboard, setDashboard] = useState<TDashboard>(dashboardInit);
   const [PhonesList, setPhonesList] =
     useState<TPhoneNumberResponse[]>(phonesListInit);
-  //End Hooks
+  // End Hooks
 
-  //Start Variables
+  // Start Variables
   const {
     assignmentId,
     assignmentStatus,
@@ -122,22 +119,11 @@ const CallCenter = () => {
     startDate,
     endDate,
   } = LayoutAssignment;
-  //End Variables
+  // End Variables
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const layoutAssignment: { assignmentByOrder: TLayoutAssignmentResponse } =
       await callAPI({
@@ -154,14 +140,14 @@ const CallCenter = () => {
       mapLayoutAssignment(layoutAssignment?.assignmentByOrder || {})
     );
 
-    //===============================
-    //===============================
-    //===============================
+    // ===============================
+    // ===============================
+    // ===============================
 
     const assignment: { assignmentByOrder: TAssignmentResponse } =
       await callAPI({
         body: {
-          //TODO-refactor: This query will be refactored after moving the layoutAssignment out of this page
+          // TODO-refactor: This query will be refactored after moving the layoutAssignment out of this page
           query: assignmentQuery,
           variables: {
             orderId: query.id,
@@ -171,10 +157,10 @@ const CallCenter = () => {
       });
 
     setAssignment(mapAssignment(assignment?.assignmentByOrder || {}));
-  }, [activeToken, query.id]);
+  }, [query.id]);
 
   const getSurveyData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const dashboard = await callAPI({
       body: {
@@ -197,29 +183,25 @@ const CallCenter = () => {
         query: phonesListQuery,
         variables: {
           surveyId: surveyId,
-          callCenterStatuses: ['CALL_LATER', 'CONTINUE_LATER'], //TODO-important: fix this
+          callCenterStatuses: ['CALL_LATER', 'CONTINUE_LATER'], // TODO-important: fix this
         },
       },
       token: token,
     });
 
     setPhonesList(phonesList?.callCenterNumberByStatus || []);
-  }, [activeToken, surveyId]);
+  }, [surveyId]);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (surveyId) getSurveyData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [surveyId]);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const toggleSideChildren = (
     <AssignmentSidebar
       assignmentId={assignmentId}
@@ -264,10 +246,10 @@ const CallCenter = () => {
     })
   );
 
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.assignments')} />

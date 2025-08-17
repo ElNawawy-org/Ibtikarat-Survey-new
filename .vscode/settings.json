@@ -1,0 +1,46 @@
+{
+  "editor.linkedEditing": true,
+  "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "editor.comments.insertSpace": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+
+  "explorer.confirmDragAndDrop": true,
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  "git.autofetch": true,
+  "git.enabled": true,
+
+  "prettier.prettierPath": "./node_modules/prettier",
+
+  "cSpell.language": "en,ar",
+
+  "workbench.editor.customLabels.patterns": {
+    //customization guide https://youtu.be/swuDCNI-t80?si=tHE2ipbOXapjAFfi
+
+    "*/**/index.*": "${dirname}.${extname}",
+    "*/**/page.*": "${dirname}.page.${extname}",
+    "*/**/(pages)/page.*": "${dirname(1)}.page.${extname}",
+
+    "*/**/style.module.*": "${dirname}.${extname(0)}",
+    "*/**/style.ts": "${dirname}.style",
+
+    "*/**/type.*": "${dirname}.type"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "postman.settings.dotenv-detection-notification-visibility": false
+}

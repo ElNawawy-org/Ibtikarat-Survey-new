@@ -26,7 +26,6 @@ import {
   TAssignmentResponse,
   TTargetAudience,
 } from 'app/researcher/_types/assignments/[id]/targeted-category.type';
-import { useDispatch } from '@util/noval';
 import { BreadCrumb } from 'packages/bread-crumb';
 import { Container } from 'packages/container';
 import { SidebarToggleLayout } from 'packages/sidebar-toggle-layout';
@@ -64,20 +63,18 @@ const targetAudienceInit: TTargetAudience = [
 ];
 
 const TargetedCategory = () => {
-  //Start Hooks
+  // Start Hooks
   const { t, lang } = useTranslation('common');
-  const { push, query } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+  const { query } = useRouter();
+
   const [LayoutAssignment, setLayoutAssignment] =
     useState<TLayoutAssignment>(layoutAssignmentInit);
   const [Assignment, setAssignment] = useState<TAssignment>(assignmentInit);
   const [TargetAudience, setTargetAudience] =
     useState<TTargetAudience>(targetAudienceInit);
-  //End Hooks
+  // End Hooks
 
-  //Start Variables
+  // Start Variables
   const {
     assignmentId,
     assignmentStatus,
@@ -94,22 +91,11 @@ const TargetedCategory = () => {
     startDate,
     endDate,
   } = LayoutAssignment;
-  //End Variables
+  // End Variables
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const layoutAssignment: { assignmentByOrder: TLayoutAssignmentResponse } =
       await callAPI({
@@ -128,9 +114,9 @@ const TargetedCategory = () => {
       )
     );
 
-    //===============================
-    //===============================
-    //===============================
+    // ===============================
+    // ===============================
+    // ===============================
 
     const assignment: { assignmentByOrder: TAssignmentResponse } =
       await callAPI({
@@ -147,21 +133,19 @@ const TargetedCategory = () => {
       mapAssignment(assignment?.assignmentByOrder || { order: { survey: {} } })
     );
 
-    //TODO-Business: how can I get the target audience?
-    //TODO-Business: Is it really a data of table, or a single record?
+    // TODO-Business: how can I get the target audience?
+    // TODO-Business: Is it really a data of table, or a single record?
     setTargetAudience(
       mapTargetAudience(assignment?.assignmentByOrder.quantity || 0)
     );
-  }, [activeToken, query.id]);
+  }, [query.id]);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const toggleSideChildren = (
     <AssignmentSidebar
       assignmentId={assignmentId}
@@ -208,10 +192,10 @@ const TargetedCategory = () => {
       details: <div className='flex gap-1 justify-center'>{detailsList}</div>,
     };
   });
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.assignments')} />

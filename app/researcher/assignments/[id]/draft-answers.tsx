@@ -24,7 +24,6 @@ import {
   TLayoutAssignment,
   TLayoutAssignmentResponse,
 } from 'app/researcher/_types/assignments/[id]/general-info.type';
-import { useDispatch } from '@util/noval';
 import { BreadCrumb } from 'packages/bread-crumb';
 import { Container } from 'packages/container';
 import { SidebarToggleLayout } from 'packages/sidebar-toggle-layout';
@@ -55,20 +54,18 @@ const assignmentInit: TAssignment = {
 const draftAnswersInit: TDraftAnswer[] = [];
 
 const DraftAnswers = () => {
-  //Start Hooks
+  // Start Hooks
   const { t, lang } = useTranslation('common');
-  const { push, query } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+  const { query } = useRouter();
+
   const [LayoutAssignment, setLayoutAssignment] =
     useState<TLayoutAssignment>(layoutAssignmentInit);
   const [Assignment, setAssignment] = useState<TAssignment>(assignmentInit);
   const [DraftAnswers, setDraftAnswers] =
     useState<TDraftAnswer[]>(draftAnswersInit);
-  //End Hooks
+  // End Hooks
 
-  //Start Variables
+  // Start Variables
   const {
     assignmentId,
     assignmentStatus,
@@ -85,22 +82,11 @@ const DraftAnswers = () => {
     startDate,
     endDate,
   } = LayoutAssignment;
-  //End Variables
+  // End Variables
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const layoutAssignment: { assignmentByOrder: TLayoutAssignmentResponse } =
       await callAPI({
@@ -117,9 +103,9 @@ const DraftAnswers = () => {
       mapLayoutAssignment(layoutAssignment?.assignmentByOrder || {})
     );
 
-    //===============================
-    //===============================
-    //===============================
+    // ===============================
+    // ===============================
+    // ===============================
 
     const assignment: { assignmentByOrder: TAssignmentResponse } =
       await callAPI({
@@ -135,16 +121,14 @@ const DraftAnswers = () => {
     setAssignment(
       mapAssignment(assignment?.assignmentByOrder || { order: { survey: {} } })
     );
-  }, [activeToken, query.id]);
+  }, [query.id]);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getDraftAnswers = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const draftAnswers: { draftResponses: TDraftAnswerResponse[] } =
       await callAPI({
@@ -158,16 +142,14 @@ const DraftAnswers = () => {
       });
 
     setDraftAnswers(draftAnswers?.draftResponses || []);
-  }, [activeToken, assignmentId]);
+  }, [assignmentId]);
 
   useEffect(() => {
     if (assignmentId) getDraftAnswers();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assignmentId]);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const toggleSideChildren = (
     <AssignmentSidebar
       assignmentId={assignmentId}
@@ -196,10 +178,10 @@ const DraftAnswers = () => {
       </Link>
     ),
   }));
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.assignments')} />

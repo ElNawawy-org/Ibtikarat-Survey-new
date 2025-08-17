@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { useCallback, useEffect, useState } from 'react';
 import { CardClickableDetailed } from 'app/researcher/_components/card-clickable-detailed';
@@ -12,8 +11,7 @@ import {
   TAssignmentsResponse,
   TAssignment,
 } from 'app/researcher/_types/assignments/index.type';
-import OrdersDatePickers from '@components/shared/orders-date-pickers'; //TODO-convert-to-package: Remove
-import { useDispatch } from '@util/noval'; //TODO-noval: remove
+// import OrdersDatePickers from '@components/shared/orders-date-pickers'; //TODO-convert-to-package: Remove
 import { Container } from 'packages/container';
 import { SearchField } from 'packages/fields/search-field';
 import { SelectFieldSimple } from 'packages/fields/select-field-simple';
@@ -22,34 +20,20 @@ import { Pagination } from 'packages/pagination';
 const assignmentsInit: TAssignment[] = [];
 
 const Assignments = () => {
-  //Start Hooks
+  // Start Hooks
   const { t, lang } = useTranslation('common');
-  const { push } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+
   const [Assignments, setAssignments] =
     useState<TAssignment[]>(assignmentsInit);
   const [CurrentPage, setCurrentPage] = useState<number>(1);
   const [NumberOfPages, setNumberOfPages] = useState<number>(1);
   const [Search, setSearch] = useState<string>('');
   const [StatusValue, setStatusValue] = useState<string>('1');
-  //End Hooks
+  // End Hooks
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const data: TAssignmentsResponse = await callAPI({
       body: {
@@ -74,16 +58,14 @@ const Assignments = () => {
 
     setAssignments(assignments);
     setNumberOfPages(data?.assignmentsByType?.pageInfo?.totalPages);
-  }, [activeToken, CurrentPage, Search]);
+  }, [CurrentPage, Search]);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [CurrentPage]);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const cardsList = Assignments?.map(
     ({
       orderDetails,
@@ -106,10 +88,10 @@ const Assignments = () => {
       );
     }
   );
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('titles.orders')} />
@@ -149,8 +131,9 @@ const Assignments = () => {
             icon={<FilterIcon />}
             label={t('common.select.viewByStatus')}
           />
-
+          {/*
           <OrdersDatePickers selector='operatorOrders.filters' />
+        */}
         </div>
 
         <div className='grid gap-8 md:grid-cols-2 xl:grid-cols-3'>

@@ -25,6 +25,8 @@
   },
 
   "rules": {
+    "spaced-comment": [2, "always"], // Require a space after the // in a comment
+
     "import/no-unresolved": 2, // Fail on unresolved modules
 
     "import/named": 2, // Fail on incorrect named imports

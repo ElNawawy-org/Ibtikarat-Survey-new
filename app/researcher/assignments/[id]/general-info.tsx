@@ -23,7 +23,6 @@ import {
   TLayoutAssignmentResponse,
   TResearcherPerformanceResponse,
 } from 'app/researcher/_types/assignments/[id]/general-info.type';
-import { useDispatch } from '@util/noval';
 import { BreadCrumb } from 'packages/bread-crumb';
 import { Container } from 'packages/container';
 import { Diagram } from 'packages/diagram';
@@ -58,18 +57,16 @@ const assignmentInit: TAssignment = {
 };
 
 const GeneralInfo = () => {
-  //Start Hooks
+  // Start Hooks
   const { t, lang } = useTranslation('common');
-  const { push, query } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+  const { query } = useRouter();
+
   const [LayoutAssignment, setLayoutAssignment] =
     useState<TLayoutAssignment>(layoutAssignmentInit);
   const [Assignment, setAssignment] = useState<TAssignment>(assignmentInit);
-  //End Hooks
+  // End Hooks
 
-  //Start Variables
+  // Start Variables
   const {
     assignmentId,
     assignmentStatus,
@@ -93,22 +90,11 @@ const GeneralInfo = () => {
       numberOfAnswers: numberOfAnswers,
     })
   );
-  //End Variables
+  // End Variables
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const layoutAssignment: { assignmentByOrder: TLayoutAssignmentResponse } =
       await callAPI({
@@ -125,9 +111,9 @@ const GeneralInfo = () => {
       mapLayoutAssignment(layoutAssignment?.assignmentByOrder || {})
     );
 
-    //===============================
-    //===============================
-    //===============================
+    // ===============================
+    // ===============================
+    // ===============================
 
     const assignment: { assignmentByOrder: TAssignmentResponse } =
       await callAPI({
@@ -160,16 +146,14 @@ const GeneralInfo = () => {
         trans: t,
       })
     );
-  }, [activeToken, query.id, t]);
+  }, [query.id, t]);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const toggleSideChildren = (
     <AssignmentSidebar
       assignmentId={assignmentId}
@@ -199,10 +183,10 @@ const GeneralInfo = () => {
       />
     )
   );
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.assignments')} />

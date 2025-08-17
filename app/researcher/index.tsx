@@ -13,7 +13,6 @@ import {
   TAssignmentsResponse,
   TDashboard,
 } from 'app/researcher/_types/index.type';
-import { useDispatch } from '@util/noval'; //TODO-noval: remove
 import { Container } from 'packages/container';
 import { ProgressCircular } from 'packages/progress-circular';
 import { ShowDetails } from 'packages/show-details';
@@ -28,31 +27,18 @@ const dashboardInit: TDashboard = {
 };
 
 const Researcher = () => {
-  //Start Hooks
+  // Start Hooks
   const { t } = useTranslation('common');
-  const { push } = useRouter();
-  //TODO-noval: fix this error
-  //@ts-expect-error ts(2349)
-  const { dispatch } = useDispatch();
+  useRouter();
+
   const [Assignments, setAssignments] =
     useState<TAssignment[]>(assignmentsInit);
   const [Dashboard, setDashboard] = useState<TDashboard>(dashboardInit);
-  //End Hooks
+  // End Hooks
 
-  //Start Data Fetching
-  //TODO-noval: stop using the noval dispatch, it has a bad side effect of re-rendering the component
-  const activeToken = useCallback(
-    () =>
-      dispatch('activeToken', {
-        callback: () => {
-          push('/');
-        },
-      }),
-    [dispatch, push]
-  );
-
+  // Start Data Fetching
   const getData = useCallback(async () => {
-    const token = await activeToken();
+    const token = '';
 
     const data: TAssignmentsResponse = await callAPI({
       body: {
@@ -67,16 +53,14 @@ const Researcher = () => {
 
     setAssignments(assignments);
     setDashboard(data?.researcherDashboard?.orderStatics);
-  }, [activeToken]);
+  }, []);
 
   useEffect(() => {
     getData();
-    //TODO-noval: this warning will stop when stop using the noval dispatch
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  //End Data Fetching
+  // End Data Fetching
 
-  //Start Lists of rendered components
+  // Start Lists of rendered components
   const cardsList = CARDS({ data: Dashboard, trans: t }).map(
     ({ id, href, value, label, icon }) => (
       <CardClickable2
@@ -118,10 +102,10 @@ const Researcher = () => {
       ),
     })
   );
-  //End Lists of rendered components
+  // End Lists of rendered components
 
   return (
-    //TODO-tsx: This container has to be in the layout instead of the page
+    // TODO-tsx: This container has to be in the layout instead of the page
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.assignments')} />
