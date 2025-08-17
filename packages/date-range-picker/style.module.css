@@ -1,0 +1,133 @@
+.container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: fit-content;
+}
+
+.button {
+    text-align: unset;
+    background: white;
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid rgb(229, 231, 235);
+    font-size: inherit;
+    transition: 0.2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.content {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.date {
+    display: grid;
+    gap: 4px;
+}
+
+.label {
+    color: #555;
+}
+
+.calendar {
+    direction: ltr;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 10;
+    background: white;
+    color: #555;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: grid;
+    gap: 12px;
+}
+
+.calendar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekdays {
+    color: #bbb;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.day {
+    padding: 10px;
+    aspect-ratio: 1/1;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.day:empty {
+    visibility: hidden;
+}
+
+.day:hover:not(.selected):not(.inRange) {
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+.today {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.selected {
+    background: rgb(128, 30, 65);
+    color: white;
+}
+
+.start {
+    border-radius: 50% 0 0 50%;
+}
+
+.end {
+    border-radius: 0 50% 50% 0;
+}
+
+.inRange {
+    background: #f0f0f0;
+    color: rgb(128, 30, 65);
+}
+
+.clearButton {
+    color: rgb(128, 30, 65);
+    display: block;
+    margin-inline-end: auto;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .button {
+        font-size: 14px;
+    }
+}

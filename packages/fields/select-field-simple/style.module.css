@@ -1,0 +1,128 @@
+/* Start Variables */
+.container {
+  --primary-rgba: #801e41;
+  --secondary-rgba: #999;
+  --hover-rgba: #f0f0f0;
+  --background-rgba: #fff;
+  --border-rgba: #edebe9;
+}
+/* End Variables */
+
+/* Start Normalization */
+.container,
+.container * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container ul {
+  list-style: none;
+}
+
+.container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container input,
+.container input:focus {
+  border: none;
+  outline: none;
+}
+/* End Normalization */
+
+.container {
+  position: relative;
+
+  /* Prevent text selection */
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+}
+
+.control {
+  background-color: var(--background-rgba);
+  height: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-rgba);
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.selectedOptions {
+  display: grid;
+  gap: 4px;
+}
+
+.optionTag {
+  background-color: var(--primary-rgba);
+  color: #fff;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.placeholder {
+  color: var(--secondary-rgba);
+}
+
+.clearBtn {
+  color: var(--secondary-rgba);
+}
+
+.arrow {
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 1000;
+  background-color: var(--background-rgba);
+  width: 100%;
+  margin-top: 4px;
+  border: 1px solid var(--border-rgba);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 8px;
+}
+
+.searchInput {
+  padding: 8px;
+
+  /* It doesn't work */
+  border-bottom: 1px solid var(--border-rgba);
+}
+
+.optionsList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--hover-rgba);
+  color: var(--primary-rgba);
+}
+
+.noOptions {
+  padding: 8px;
+}
+
+.selected {
+  background-color: var(--primary-rgba);
+  color: #fff;
+}
