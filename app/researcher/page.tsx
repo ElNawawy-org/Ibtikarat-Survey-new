@@ -1,4 +1,3 @@
-'use client';
 // TODO-fix: this page has a build error
 /* 
 import Link from 'next/link';

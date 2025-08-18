@@ -1,12 +1,12 @@
 import { FC, ReactNode } from 'react';
-import { ContextProviders } from './_context/context-providers';
+import { ResearcherProviders } from './_context/researcher-providers';
 
 type TProps = {
   children: ReactNode;
 };
 
 const ResearcherLayout: FC<TProps> = ({ children }) => {
-  return <ContextProviders>{children}</ContextProviders>;
+  return <ResearcherProviders>{children}</ResearcherProviders>;
 };
 
 export default ResearcherLayout;

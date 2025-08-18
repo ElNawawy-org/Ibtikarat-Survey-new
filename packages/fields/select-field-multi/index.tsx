@@ -35,19 +35,6 @@ const MyComponent = () => {
 };
 
 export default MyComponent;
-
- * @param {Object} props - Component properties.
- * @param {{ label: string, value: string }[]} [props.options] - List of options available for selection.
- * @param {string[]} [props.values=[]] - Array of selected values.
- * @param {Function} props.onChange - Callback function to handle selection changes.
- * @param {string} [props.placeholder='Select'] - Placeholder text when no selection is made.
- * @param {string} [props.searchPlaceholder='Search'] - Placeholder text for the search input field.
- * @param {string} [props.allOptionsSelected='All Options Selected'] - Text displayed when all options are selected.
- * @param {string} [props.selectAll='Select All'] - Label for the "Select All" option.
- * @param {string} [props.noOptions='No Options'] - Message shown when no options match the search query.
- * @param {boolean} [props.rtl=true] - Whether the dropdown should be displayed in RTL mode.
- * @param {JSX.Element} [props.icon] - Optional icon to display at the start of the select field.
- * @returns {JSX.Element} The SelectFieldMulti dropdown component.
  */
 
 export const SelectFieldMulti = ({

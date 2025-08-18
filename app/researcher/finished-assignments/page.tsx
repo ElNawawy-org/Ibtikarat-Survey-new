@@ -1,9 +1,9 @@
 'use client';
 import useTranslation from 'next-translate/useTranslation';
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { CardClickable } from 'app/researcher/_components/card-clickable';
 import { RenderMeta } from 'app/researcher/_components/render-meta';
-import { NameContext } from 'app/researcher/_context/name-context';
+import { useResearcherCtx } from 'app/researcher/_context/researcher-context';
 import { callAPI } from 'app/researcher/_helpers/call-api';
 import { assignmentsQuery } from 'app/researcher/_gql/finished-assignments.gql';
 import { PAGE_SIZE } from 'app/researcher/_data/shared/constants.data';
@@ -19,7 +19,7 @@ const FinishedAssignments = () => {
   // Start Hooks
   const { t } = useTranslation('common');
 
-  const { State, setState } = useContext(NameContext);
+  const { State, setState } = useResearcherCtx();
 
   const [Assignments, setAssignments] = useState<TAssignment[]>();
   const [CurrentPage, setCurrentPage] = useState<number>(1);

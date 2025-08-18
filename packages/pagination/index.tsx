@@ -1,17 +1,10 @@
-import { JSX } from 'react';
+import { FC } from 'react';
 import { TProps } from './type';
 import { ArrowLeftIcon } from './arrow-left-icon';
 import { ArrowRightIcon } from './arrow-right-icon';
 
 /**
  * A reusable pagination component that manages navigation between pages and allows rows per page selection.
- *
- * @param {Object} props - Component props.
- * @param {number} [props.CurrentPage=1] - The current active page.
- * @param {Function} props.setCurrentPage - Callback to update the current page.
- * @param {number} [props.numberOfPages=1] - Total number of pages.
- *
- * @returns {JSX.Element} The rendered pagination component.
  *
  * @example
  * const [CurrentPage, setCurrentPage] = useState(1);
@@ -23,11 +16,11 @@ import { ArrowRightIcon } from './arrow-right-icon';
  * />
  */
 
-export const Pagination = ({
+export const Pagination: FC<TProps> = ({
   CurrentPage = 1,
   setCurrentPage,
   numberOfPages = 1,
-}: TProps): JSX.Element => {
+}) => {
   const handlePrev = () => {
     setCurrentPage(CurrentPage - 1);
   };
