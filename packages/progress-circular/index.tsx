@@ -1,4 +1,4 @@
-// TODO: -elnawawy- Refactor this component
+// TODO-tsx: -elnawawy- Refactor this component
 
 import { CircleProgress } from 'react-gradient-progress';
 import { TProps } from './type';

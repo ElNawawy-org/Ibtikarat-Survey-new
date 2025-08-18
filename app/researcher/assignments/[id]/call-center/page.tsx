@@ -184,7 +184,7 @@ const CallCenter = () => {
         query: phonesListQuery,
         variables: {
           surveyId: surveyId,
-          callCenterStatuses: ['CALL_LATER', 'CONTINUE_LATER'], // TODO-important: fix this
+          callCenterStatuses: ['CALL_LATER', 'CONTINUE_LATER'], // TODO-important: fix this hardcoded values
         },
       },
       token: token,
