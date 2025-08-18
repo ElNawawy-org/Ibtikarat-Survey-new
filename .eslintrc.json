@@ -261,7 +261,7 @@
       }
     },
     {
-      "files": ["page.*", "layout.tsx"],
+      "files": ["page.*", "layout.tsx", "next.config.ts"],
       "rules": {
         //Forbid using default export
         "import/no-default-export": 0

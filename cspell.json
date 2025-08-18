@@ -13,5 +13,5 @@
   //This project ignored words
   "words": [],
   //This project ignored paths
-  "ignorePaths": ["**/vocab.json", "**/_dummy", "**/_gql/**/*.json"]
+  "ignorePaths": ["**/vocab.json", "**/_dummy", "**/_gql/**/*.json", "locales"]
 }

@@ -1,4 +1,6 @@
 'use client';
+// TODO-fix: this page has a build error
+/* 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -26,8 +28,10 @@ const dashboardInit: TDashboard = {
   accomplished: '',
   rejected: '',
 };
+ */
 
 const Researcher = () => {
+  /* 
   // Start Hooks
   const { t } = useTranslation('common');
   useRouter();
@@ -104,34 +108,33 @@ const Researcher = () => {
     })
   );
   // End Lists of rendered components
+  */
 
-  return (
-    // TODO-tsx: This container has to be in the layout instead of the page
-    <Container>
-      {/* TODO: follow the NextJS v15 meta */}
-      <RenderMeta title={t('researcher.assignments')} />
+  return <div>Researcher</div>;
 
-      <section className='grid gap-8'>
-        <h1 className='capitalize text-lg 2xl:text-2xl font-bold'>
-          {t('toolbar.dashboard')}
-        </h1>
-
-        <div className='grid gap-4 p-4 border border-grey-400'>
-          <h2>{t('researcher.assignments')}</h2>
-
-          <ul className='list-none overflow-x-auto grid gap-1 md:gap-6 md:grid-cols-2 xl:grid-cols-4'>
-            {cardsList}
-          </ul>
-        </div>
-
-        <SimpleTable
-          header={t('researcher.latestAssignments')}
-          columns={COLUMNS(t)}
-          rows={rows}
-        />
-      </section>
-    </Container>
-  );
+  // return (
+  //   // TODO-tsx: This container has to be in the layout instead of the page
+  //   <Container>
+  //     {/* TODO: follow the NextJS v15 meta */}
+  //     <RenderMeta title={t('researcher.assignments')} />
+  //     <section className='grid gap-8'>
+  //       <h1 className='capitalize text-lg 2xl:text-2xl font-bold'>
+  //         {t('toolbar.dashboard')}
+  //       </h1>
+  //       <div className='grid gap-4 p-4 border border-grey-400'>
+  //         <h2>{t('researcher.assignments')}</h2>
+  //         <ul className='list-none overflow-x-auto grid gap-1 md:gap-6 md:grid-cols-2 xl:grid-cols-4'>
+  //           {cardsList}
+  //         </ul>
+  //       </div>
+  //       <SimpleTable
+  //         header={t('researcher.latestAssignments')}
+  //         columns={COLUMNS(t)}
+  //         rows={rows}
+  //       />
+  //     </section>
+  //   </Container>
+  // );
 };
 
 export default Researcher;
