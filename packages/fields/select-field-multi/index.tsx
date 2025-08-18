@@ -77,7 +77,7 @@ export const SelectFieldMulti = ({
       );
     },
     [
-      /*search, options*/
+      /* search, options*/
     ]
   );
 

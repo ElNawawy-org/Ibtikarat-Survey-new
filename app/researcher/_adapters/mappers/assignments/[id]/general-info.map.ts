@@ -7,7 +7,7 @@ import {
 } from 'app/researcher/_types/assignments/[id]/general-info.type';
 import { TTrans } from 'app/researcher/_types/shared.type';
 
-//TODO-typescript: move these types to a separate file
+// TODO-typescript: move these types to a separate file
 type TMapLayoutAssignment = (
   assignment: TLayoutAssignmentResponse
 ) => TLayoutAssignment;

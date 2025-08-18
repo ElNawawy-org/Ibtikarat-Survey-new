@@ -248,13 +248,20 @@
 
   "overrides": [
     {
-      "files": ["**/_fonts/*"],
+      "files": ["layout.tsx"],
       "rules": {
-        "camelcase": 0
+        "camelcase": 0,
+        "import/no-unassigned-import": 0
       }
     },
     {
-      "files": ["page.*"],
+      "files": ["next-env.d.ts"],
+      "rules": {
+        "spaced-comment": [0, "always"]
+      }
+    },
+    {
+      "files": ["page.*", "layout.tsx"],
       "rules": {
         //Forbid using default export
         "import/no-default-export": 0

@@ -42,7 +42,7 @@ export const callAPI = async ({
 
     return data.data;
   } catch (error) {
-    //TODO-improvement: -elnawawy- improve error handling using Toaster
+    // TODO-improvement: -elnawawy- improve error handling using Toaster
     if (error) console.error(error);
   }
 };

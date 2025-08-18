@@ -33,10 +33,10 @@ export const CardInfo: FC<TProps> = ({
   const hasHoverEffect = desc ? 'group hover:bg-primary-600' : '';
   const cardOutline = shadow ? 'shadow-lg' : 'border';
 
-  //TODO-tsx: Clone from this component anther one without the hover effect and the fixed height
+  // TODO-tsx: Clone from this component anther one without the hover effect and the fixed height
   return (
     <div
-      //! NOTE: This div has a fixed hight, this is a workaround to stop the card from growing during the hover effect
+      // ! NOTE: This div has a fixed hight, this is a workaround to stop the card from growing during the hover effect
       className={`h-[111px] p-4 select-none ${cardOutline} ${hasHoverEffect}`}
     >
       <div className='h-full grid gap-2 grid-cols-1fr_auto items-center group-hover:hidden'>

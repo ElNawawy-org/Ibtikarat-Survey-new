@@ -1,6 +1,6 @@
 // This component has been copied from the old project
 // We set its typing and logic
-//TODO: its tsx needs to be refactored
+// TODO: its tsx needs to be refactored
 
 import useTranslation from 'next-translate/useTranslation';
 import {
@@ -21,7 +21,7 @@ export const Diagram = ({
 }: TProps) => {
   const { t, lang } = useTranslation('common');
 
-  //?? I can't see this variable on the screen, so I assume it's not used
+  // ?? I can't see this variable on the screen, so I assume it's not used
   const numberOfAnswers =
     lang === 'en' ? 'Number of answers' : 'عدد الإستجابات';
 
@@ -29,7 +29,7 @@ export const Diagram = ({
     if (records.length === 0) return 0;
 
     const numberOfAnswers: number = records
-      .map(record => record.numberOfAnswers) //TODO:Remove this line
+      .map(record => record.numberOfAnswers) // TODO:Remove this line
       .reduce((a, b) => a + b);
 
     return numberOfAnswers;
