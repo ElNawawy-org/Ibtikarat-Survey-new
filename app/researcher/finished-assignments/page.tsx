@@ -1,8 +1,9 @@
 'use client';
 import useTranslation from 'next-translate/useTranslation';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import { CardClickable } from 'app/researcher/_components/card-clickable';
 import { RenderMeta } from 'app/researcher/_components/render-meta';
+import { NameContext } from 'app/researcher/_context/name-context';
 import { callAPI } from 'app/researcher/_helpers/call-api';
 import { assignmentsQuery } from 'app/researcher/_gql/finished-assignments.gql';
 import { PAGE_SIZE } from 'app/researcher/_data/shared/constants.data';
@@ -17,6 +18,8 @@ import { Pagination } from 'packages/pagination';
 const FinishedAssignments = () => {
   // Start Hooks
   const { t } = useTranslation('common');
+
+  const { State, setState } = useContext(NameContext);
 
   const [Assignments, setAssignments] = useState<TAssignment[]>();
   const [CurrentPage, setCurrentPage] = useState<number>(1);
@@ -73,6 +76,10 @@ const FinishedAssignments = () => {
     <Container>
       {/* TODO: follow the NextJS v15 meta */}
       <RenderMeta title={t('researcher.finishedAssignments')} />
+
+      <button onClick={() => setState(prev => !prev)}>
+        {`Hello ${State}`}
+      </button>
 
       <section className='grid gap-8'>
         <h1 className='capitalize text-lg 2xl:text-2xl font-bold'>
