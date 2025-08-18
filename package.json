@@ -18,6 +18,7 @@
     "next-translate": "^2.6.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-gradient-progress": "^1.0.3",
     "recharts": "^3.1.2"
   },
   "devDependencies": {
@@ -26,6 +27,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.39.1",
     "cspell": "^9.2.0",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
