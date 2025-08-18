@@ -1,174 +1,174 @@
 {
-    "reject": {
-        "PRICE": "السعر",
-        "QUANTITY": "الكمية",
-        "NOT_AVAILABLE": "غير متاح"
+  "reject": {
+    "PRICE": "السعر",
+    "QUANTITY": "الكمية",
+    "NOT_AVAILABLE": "غير متاح"
+  },
+  "response": {
+    "COMPLETED": "مكتملة",
+    "PARTIAL": "غير مكتملة"
+  },
+  "surveyType": {
+    "SCRATCH": "انشائها من الصفر",
+    "TEMPLATE": "نماذج جاهزة",
+    "SCALE": "مقياس",
+    "CUSTOM": "انشائها لي"
+  },
+  "surveyStatus": {
+    "DONE": "مكتملة",
+    "NEW": "جديد",
+    "PREPARE": "تحت المراجعة",
+    "REJECTED": "مرفوض",
+    "DRAFT": "مسودة",
+    "OPENED": "منشورة",
+    "COMPLETED": "مٌكتملة",
+    "CreateForMe": "انشئها لي",
+    "CHECK": "التدقيق",
+    "CLOSED": "مٌغلقة",
+    "DELETED": "حُذفت",
+    "SCHEDULED": "مجدولة",
+    "PENDING_FOR_APPROVAL": "بانتظار موافقتكم",
+    "UNDERPROCESS": "تحت المراجعة",
+    "APPROVED": "جاري التنفيذ",
+    "EXECUTED": "تم التنفيذ",
+    "CANCELLED": "ملغاة"
+  },
+  "templateStatus": {
+    "APPROVED": "مٌصدق عليها",
+    "DRAFT": "مسودة",
+    "CLOSED": "مغلقة",
+    "DELETED": "حٌذفت",
+    "PUBLISHED": "تم النشر",
+    "PENDING_FOR_APPROVAL": "بانتظار موافقتكم"
+  },
+  "faqStatus": {
+    "DRAFT": "مسودة",
+    "PUBLISHED": "منشورة",
+    "DELETED": "حُذفت"
+  },
+  "helpMessageStatus": {
+    "NEW": "جديد",
+    "RESPONDED": "تم الرد",
+    "IGNORED": "تجاهل"
+  },
+  "settingCategories": {
+    "TARGET_AUDIENCE": "الفئة المستهدفة"
+  },
+  "addons": {
+    "CUSTOM": "إنشاء استبيان",
+    "REVIEW": "مراجعة الاستبيان",
+    "COLLECTION": "جمع البيانات",
+    "AUDITING": "تدقيق البيانات",
+    "REPORTING": "التقارير",
+    "REPORT": "التقارير",
+    "MULTI": "خدمات متعددة",
+    "NONE": "لم يحدد",
+    "COLLECT": "جمع البيانات",
+    "AUDIT": "تدقيق البيانات"
+  },
+  "operator": {
+    "status": {
+      "DRAFT": "مسودة",
+      "PENDING_FOR_APPROVAL": "بانتظار موافقتكم",
+      "ACTIVE": "نشط",
+      "DELETED": "حذفت",
+      "SUSPENDED": "معلق"
     },
-    "response": {
-        "COMPLETED": "مكتملة",
-        "PARTIAL": "غير مكتملة"
-    },
-    "surveyType": {
-        "SCRATCH": "انشائها من الصفر",
-        "TEMPLATE": "نماذج جاهزة",
-        "SCALE": "مقياس",
-        "CUSTOM": "انشائها لي"
-    },
-    "surveyStatus": {
-        "DONE": "مكتملة",
-        "NEW": "جديد",
-        "PREPARE": "تحت المراجعة",
-        "REJECTED": "مرفوض",
-        "DRAFT": "مسودة",
-        "OPENED": "منشورة",
-        "COMPLETED": "مٌكتملة",
-        "CreateForMe": "انشئها لي",
-        "CHECK": "التدقيق",
-        "CLOSED": "مٌغلقة",
-        "DELETED": "حُذفت",
-        "SCHEDULED": "مجدولة",
-        "PENDING_FOR_APPROVAL": "بانتظار موافقتكم",
-        "UNDERPROCESS": "تحت المراجعة",
-        "APPROVED": "جاري التنفيذ",
-        "EXECUTED": "تم التنفيذ",
-        "CANCELLED": "ملغاة"
-    },
-    "templateStatus": {
-        "APPROVED": "مٌصدق عليها",
-        "DRAFT": "مسودة",
-        "CLOSED": "مغلقة",
-        "DELETED": "حٌذفت",
-        "PUBLISHED": "تم النشر",
-        "PENDING_FOR_APPROVAL": "بانتظار موافقتكم"
-    },
-    "faqStatus": {
-        "DRAFT": "مسودة",
-        "PUBLISHED": "منشورة",
-        "DELETED": "حُذفت"
-    },
-    "helpMessageStatus": {
-        "NEW": "جديد",
-        "RESPONDED": "تم الرد",
-        "IGNORED": "تجاهل"
-    },
-    "settingCategories": {
-        "TARGET_AUDIENCE": "الفئة المستهدفة"
-    },
-    "addons": {
-        "CUSTOM": "إنشاء استبيان",
-        "REVIEW": "مراجعة الاستبيان",
-        "COLLECTION": "جمع البيانات",
-        "AUDITING": "تدقيق البيانات",
-        "REPORTING": "التقارير",
-        "REPORT": "التقارير",
-        "MULTI": "خدمات متعددة",
-        "NONE": "لم يحدد",
-        "COLLECT": "جمع البيانات",
-        "AUDIT": "تدقيق البيانات"
-    },
-    "operator": {
-        "status": {
-            "DRAFT": "مسودة",
-            "PENDING_FOR_APPROVAL": "بانتظار موافقتكم",
-            "ACTIVE": "نشط",
-            "DELETED": "حذفت",
-            "SUSPENDED": "معلق"
-        },
-        "education": {
-            "doctor": "دكتوراة",
-            "master": "ماجستير",
-            "bachelor": "بكالوريس",
-            "elementary": "ابتدائي",
-            "secondarySchool": "متوسط",
-            "highschool": "ثانوي"
-        }
-    },
-    "questionBankStatus": {
-        "DRAFT": "مسودة",
-        "DELETED": "حذفت",
-        "PUBLISHED": "نٌشرت"
-    },
-    "collectionOptions": {
-        "location": {
-            "any": "Any",
-            "schools": "المدارس",
-            "hospitals": "المستشفيات"
-        },
-        "targetAudienceCriteria": {
-            "gender": {
-                "male": "ذكور",
-                "female": "إناث",
-                "any": "كلا الجنسين"
-            }
-        },
-        "education": {
-            "phd": "دكتوراه",
-            "master": "ماجستير",
-            "bachelor": "بكالوريوس",
-            "elementary": "إبتدائي",
-            "secondarySchool": "متوسط",
-            "highschool": "ثانوي"
-        },
-        "maritalStatus": {
-            "married": "مزوج/متزوجة",
-            "widowed": "ارمل/ارملة",
-            "divorced": "مطلق/مطلقة",
-            "single": "أعزب/عزباء"
-        },
-        "jobStatus": {
-            "fullTime": "دوام كامل",
-            "partTime": "دوام جزئي",
-            "FREELANCE": "عمل حر",
-            "unemployed": "عاطل عن العمل",
-            "student": "طالب",
-            "retired": "متقاعد"
-        },
-        "jobSector": {
-            "CIVIL_GOV": "قطاع حكومي مدني",
-            "MILITARY_GOV": "قطاع حكومي عسكري",
-            "PRIVATE": "قطاع خاص",
-            "THIRD": "قطاع ثالث"
-        },
-        "jobLevel": {
-            "SENIOR_JOB": "وظائف عليا",
-            "AVERAGE_JOB": "وظائف متوسطة",
-            "MINIMUM_JOB": "وظائف دنيا"
-        }
-    },
-    "agency": {
-        "SECURITY": "الأمان",
-        "STATISTIC": "إحصائية",
-        "CHARITY": "الاعمال الخيرية",
-        "ALFARES": "الفارس",
-        "OTHER": "آخرى"
-    },
-    "notification": {
-        "success": {
-            "copy": "تم عمل نسخة من الإستبيان بنجاح.",
-            "delete": "تم حذف الإستبيان بنجاح."
-        }
-    },
-    "FileTypeEnum": {
-        "survey_answers": "إجابات الإستبيان",
-        "user_uploads": "ملفات المستخدم",
-        "scale_builder_uploads": "ملفات باني المقاييس",
-        "admin_uploads": "ملفات الأدمن",
-        "operation_uploads": "ملفات العمليات",
-        "studies_uploads": "ملفات الدراسات",
-        "supervisor_uploads": "ملفات المشرف",
-        "researcher_uploads": "ملفات الباحث"
-    },
-    "collectionType": {
-        "direct": "مقابلة",
-        "distribute": "توزيع",
-        "call": "إتصال",
-        "online": "نشر في النت"
-    },
-    "estimatedTime": {
-        "1": "أقل من 5 دقائق",
-        "2": "5-15 دقيقة",
-        "3": "16-30 دقيقة",
-        "4": "31-60 دقيقة",
-        "5": "أكثر من ساعة"
+    "education": {
+      "doctor": "دكتوراة",
+      "master": "ماجستير",
+      "bachelor": "بكالوريس",
+      "elementary": "ابتدائي",
+      "secondarySchool": "متوسط",
+      "highschool": "ثانوي"
     }
+  },
+  "questionBankStatus": {
+    "DRAFT": "مسودة",
+    "DELETED": "حذفت",
+    "PUBLISHED": "نٌشرت"
+  },
+  "collectionOptions": {
+    "location": {
+      "any": "Any",
+      "schools": "المدارس",
+      "hospitals": "المستشفيات"
+    },
+    "targetAudienceCriteria": {
+      "gender": {
+        "male": "ذكور",
+        "female": "إناث",
+        "any": "كلا الجنسين"
+      }
+    },
+    "education": {
+      "phd": "دكتوراه",
+      "master": "ماجستير",
+      "bachelor": "بكالوريوس",
+      "elementary": "إبتدائي",
+      "secondarySchool": "متوسط",
+      "highschool": "ثانوي"
+    },
+    "maritalStatus": {
+      "married": "مزوج/متزوجة",
+      "widowed": "ارمل/ارملة",
+      "divorced": "مطلق/مطلقة",
+      "single": "أعزب/عزباء"
+    },
+    "jobStatus": {
+      "fullTime": "دوام كامل",
+      "partTime": "دوام جزئي",
+      "FREELANCE": "عمل حر",
+      "unemployed": "عاطل عن العمل",
+      "student": "طالب",
+      "retired": "متقاعد"
+    },
+    "jobSector": {
+      "CIVIL_GOV": "قطاع حكومي مدني",
+      "MILITARY_GOV": "قطاع حكومي عسكري",
+      "PRIVATE": "قطاع خاص",
+      "THIRD": "قطاع ثالث"
+    },
+    "jobLevel": {
+      "SENIOR_JOB": "وظائف عليا",
+      "AVERAGE_JOB": "وظائف متوسطة",
+      "MINIMUM_JOB": "وظائف دنيا"
+    }
+  },
+  "agency": {
+    "SECURITY": "الأمان",
+    "STATISTIC": "إحصائية",
+    "CHARITY": "الاعمال الخيرية",
+    "ALFARES": "الفارس",
+    "OTHER": "آخرى"
+  },
+  "notification": {
+    "success": {
+      "copy": "تم عمل نسخة من الإستبيان بنجاح.",
+      "delete": "تم حذف الإستبيان بنجاح."
+    }
+  },
+  "FileTypeEnum": {
+    "survey_answers": "إجابات الإستبيان",
+    "user_uploads": "ملفات المستخدم",
+    "scale_builder_uploads": "ملفات باني المقاييس",
+    "admin_uploads": "ملفات الأدمن",
+    "operation_uploads": "ملفات العمليات",
+    "studies_uploads": "ملفات الدراسات",
+    "supervisor_uploads": "ملفات المشرف",
+    "researcher_uploads": "ملفات الباحث"
+  },
+  "collectionType": {
+    "direct": "مقابلة",
+    "distribute": "توزيع",
+    "call": "إتصال",
+    "online": "نشر في النت"
+  },
+  "estimatedTime": {
+    "1": "أقل من 5 دقائق",
+    "2": "5-15 دقيقة",
+    "3": "16-30 دقيقة",
+    "4": "31-60 دقيقة",
+    "5": "أكثر من ساعة"
+  }
 }

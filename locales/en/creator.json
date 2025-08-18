@@ -1,10 +1,10 @@
 {
-    "options": {
-        "first": "item 1",
-        "otherText": "Add other option (description)",
-        "determinValue": "Please determin the value to be used below",
-        "save": "save",
-        "cancel": "cancel",
-        "select": "select"
-    }
+  "options": {
+    "first": "item 1",
+    "otherText": "Add other option (description)",
+    "determinValue": "Please determin the value to be used below",
+    "save": "save",
+    "cancel": "cancel",
+    "select": "select"
+  }
 }

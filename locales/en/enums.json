@@ -1,167 +1,167 @@
 {
-    "reject": {
-        "PRICE": "price",
-        "QUANTITY": "quantity",
-        "NOT_AVAILABLE": "not available"
+  "reject": {
+    "PRICE": "price",
+    "QUANTITY": "quantity",
+    "NOT_AVAILABLE": "not available"
+  },
+  "response": {
+    "COMPLETED": "completed",
+    "PARTIAL": "partial"
+  },
+  "surveyType": {
+    "SCRATCH": "Created from scratch",
+    "TEMPLATE": "Template based",
+    "CUSTOM": "Created for me"
+  },
+  "surveyStatus": {
+    "DONE": "Done",
+    "NEW": "New",
+    "PREPARE": "Prepare",
+    "REJECTED": "Rejected",
+    "DRAFT": "draft",
+    "OPENED": "published",
+    "COMPLETED": "completed",
+    "CLOSED": "closed",
+    "DELETED": "deleted",
+    "SCHEDULED": "scheduled",
+    "PENDING_FOR_APPROVAL": "pending for approval",
+    "UNDERPROCESS": "Under Process",
+    "APPROVED": "approved"
+  },
+  "templateStatus": {
+    "APPROVED": "approve",
+    "DRAFT": "draft",
+    "CLOSED": "closed",
+    "DELETED": "deleted",
+    "PUBLISHED": "published",
+    "PENDING_FOR_APPROVAL": "pending for approval"
+  },
+  "faqStatus": {
+    "DRAFT": "draft",
+    "PUBLISHED": "published",
+    "DELETED": "deleted"
+  },
+  "helpMessageStatus": {
+    "NEW": "new",
+    "RESPONDED": "responded",
+    "IGNORED": "ignored"
+  },
+  "settingCategories": {
+    "TARGET_AUDIENCE": "Target Audience"
+  },
+  "addons": {
+    "CUSTOM": "create survey",
+    "REVIEW": "review",
+    "COLLECTION": "collecting",
+    "AUDITING": "auditing",
+    "AUDIT": "auditing",
+    "REPORTING": "reporting",
+    "REPORT": "reporting",
+    "MULTI": "Multi Services"
+  },
+  "operator": {
+    "status": {
+      "DRAFT": "draft",
+      "PENDING_FOR_APPROVAL": "pending for approval",
+      "ACTIVE": "active",
+      "DELETED": "deleted",
+      "SUSPENDED": "suspended"
     },
-    "response": {
-        "COMPLETED": "completed",
-        "PARTIAL": "partial"
+    "education": {
+      "doctor": "doctor",
+      "master": "master",
+      "bachelor": "bachelor",
+      "elementary": "elementary",
+      "secondarySchool": "secondary school",
+      "highschool": "highschool"
     },
-    "surveyType": {
-        "SCRATCH": "Created from scratch",
-        "TEMPLATE": "Template based",
-        "CUSTOM": "Created for me"
-    },
-    "surveyStatus": {
-        "DONE": "Done",
-        "NEW": "New",
-        "PREPARE": "Prepare",
-        "REJECTED": "Rejected",
-        "DRAFT": "draft",
-        "OPENED": "published",
-        "COMPLETED": "completed",
-        "CLOSED": "closed",
-        "DELETED": "deleted",
-        "SCHEDULED": "scheduled",
-        "PENDING_FOR_APPROVAL": "pending for approval",
-        "UNDERPROCESS": "Under Process",
-        "APPROVED": "approved"
-    },
-    "templateStatus": {
-        "APPROVED": "approve",
-        "DRAFT": "draft",
-        "CLOSED": "closed",
-        "DELETED": "deleted",
-        "PUBLISHED": "published",
-        "PENDING_FOR_APPROVAL": "pending for approval"
-    },
-    "faqStatus": {
-        "DRAFT": "draft",
-        "PUBLISHED": "published",
-        "DELETED": "deleted"
-    },
-    "helpMessageStatus": {
-        "NEW": "new",
-        "RESPONDED": "responded",
-        "IGNORED": "ignored"
-    },
-    "settingCategories": {
-        "TARGET_AUDIENCE": "Target Audience"
-    },
-    "addons": {
-        "CUSTOM": "create survey",
-        "REVIEW": "review",
-        "COLLECTION": "collecting",
-        "AUDITING": "auditing",
-        "AUDIT": "auditing",
-        "REPORTING": "reporting",
-        "REPORT": "reporting",
-        "MULTI": "Multi Services"
-    },
-    "operator": {
-        "status": {
-            "DRAFT": "draft",
-            "PENDING_FOR_APPROVAL": "pending for approval",
-            "ACTIVE": "active",
-            "DELETED": "deleted",
-            "SUSPENDED": "suspended"
-        },
-        "education": {
-            "doctor": "doctor",
-            "master": "master",
-            "bachelor": "bachelor",
-            "elementary": "elementary",
-            "secondarySchool": "secondary school",
-            "highschool": "highschool"
-        },
-        "nationality": {
-            "saudi": "saudi",
-            "nonSaudi": "non-saudi"
-        }
-    },
-    "questionBankStatus": {
-        "DRAFT": "draft",
-        "DELETED": "deleted",
-        "PUBLISHED": "published"
-    },
-    "collectionOptions": {
-        "location": {
-            "any": "any",
-            "schools": "schools",
-            "hospitals": "hospitals"
-        },
-        "targetAudienceCriteria": {
-            "city": {
-                "any": "any",
-                "riyadh": "riyadh",
-                "khobar": "khobar"
-            },
-            "gender": {
-                "any": "any",
-                "male": "male",
-                "female": "female"
-            }
-        },
-        "education": {
-            "phd": "phd",
-            "master": "master",
-            "bachelor": "bachelor",
-            "elementary": "elementary",
-            "secondarySchool": "secondary school",
-            "highschool": "highschool"
-        },
-        "maritalStatus": {
-            "married": "married",
-            "widowed": "widowed",
-            "divorced": "divorced",
-            "single": "single",
-            "neverMarried": "never married"
-        },
-        "jobStatus": {
-            "fullTime": "Full time",
-            "partTime": "Part time",
-            "unemployed": "Unemployed",
-            "FREELANCE": "Freelance",
-            "student": "Student",
-            "retired": "Retired"
-        },
-        "jobSector": {
-            "CIVIL_GOV": "Civil Governorate",
-            "MILITARY_GOV": "Military",
-            "THIRD": "Third sector",
-            "PRIVATE": "Private",
-            "RETIRED": "Retired",
-            "FREELANCE": "Freelance",
-            "NO_JOB": "No Job"
-        },
-        "jobLevel": {
-            "SENIOR_JOB": "Senior Job",
-            "AVERAGE_JOB": "Average Job",
-            "MINIMUM_JOB": "Minimum Job"
-        }
-    },
-    "agency": {
-        "SECURITY": "security",
-        "STATISTIC": "statistic",
-        "CHARITY": "charity",
-        "ALFARES": "alfares",
-        "OTHER": "other"
-    },
-    "notification": {
-        "success": {
-            "copy": "Copy Don successfully .",
-            "delete": "Delete Don successfully ."
-        }
-    },
-    "FileTypeEnum": {
-        "survey_answers": "survey answers",
-        "user_uploads": "user uploads",
-        "scale_builder_uploads": "scale builder uploads",
-        "admin_uploads": "admin uploads",
-        "operation_uploads": "operation uploads",
-        "studies_uploads": "studies uploads",
-        "supervisor_uploads": "supervisor uploads",
-        "researcher_uploads": "researcher uploads"
+    "nationality": {
+      "saudi": "saudi",
+      "nonSaudi": "non-saudi"
     }
+  },
+  "questionBankStatus": {
+    "DRAFT": "draft",
+    "DELETED": "deleted",
+    "PUBLISHED": "published"
+  },
+  "collectionOptions": {
+    "location": {
+      "any": "any",
+      "schools": "schools",
+      "hospitals": "hospitals"
+    },
+    "targetAudienceCriteria": {
+      "city": {
+        "any": "any",
+        "riyadh": "riyadh",
+        "khobar": "khobar"
+      },
+      "gender": {
+        "any": "any",
+        "male": "male",
+        "female": "female"
+      }
+    },
+    "education": {
+      "phd": "phd",
+      "master": "master",
+      "bachelor": "bachelor",
+      "elementary": "elementary",
+      "secondarySchool": "secondary school",
+      "highschool": "highschool"
+    },
+    "maritalStatus": {
+      "married": "married",
+      "widowed": "widowed",
+      "divorced": "divorced",
+      "single": "single",
+      "neverMarried": "never married"
+    },
+    "jobStatus": {
+      "fullTime": "Full time",
+      "partTime": "Part time",
+      "unemployed": "Unemployed",
+      "FREELANCE": "Freelance",
+      "student": "Student",
+      "retired": "Retired"
+    },
+    "jobSector": {
+      "CIVIL_GOV": "Civil Governorate",
+      "MILITARY_GOV": "Military",
+      "THIRD": "Third sector",
+      "PRIVATE": "Private",
+      "RETIRED": "Retired",
+      "FREELANCE": "Freelance",
+      "NO_JOB": "No Job"
+    },
+    "jobLevel": {
+      "SENIOR_JOB": "Senior Job",
+      "AVERAGE_JOB": "Average Job",
+      "MINIMUM_JOB": "Minimum Job"
+    }
+  },
+  "agency": {
+    "SECURITY": "security",
+    "STATISTIC": "statistic",
+    "CHARITY": "charity",
+    "ALFARES": "alfares",
+    "OTHER": "other"
+  },
+  "notification": {
+    "success": {
+      "copy": "Copy Don successfully .",
+      "delete": "Delete Don successfully ."
+    }
+  },
+  "FileTypeEnum": {
+    "survey_answers": "survey answers",
+    "user_uploads": "user uploads",
+    "scale_builder_uploads": "scale builder uploads",
+    "admin_uploads": "admin uploads",
+    "operation_uploads": "operation uploads",
+    "studies_uploads": "studies uploads",
+    "supervisor_uploads": "supervisor uploads",
+    "researcher_uploads": "researcher uploads"
+  }
 }
