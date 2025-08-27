@@ -1,4 +1,7 @@
+'use client';
 // TODO-fix: this page has a build error
+
+import { useSession, signIn, signOut } from 'next-auth/react';
 /* 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -109,8 +112,23 @@ const Researcher = () => {
   // End Lists of rendered components
   */
 
-  return <div>Researcher</div>;
+  const { data: session } = useSession();
 
+  if (!session) {
+    return (
+      <div>
+        <p>You are not logged in.</p>
+        <button onClick={() => signIn('keycloak')}>Login with Keycloak</button>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <p>Welcome {session.user?.name}</p>
+      <button onClick={() => signOut()}>Logout</button>
+    </div>
+  );
   // return (
   //   // TODO-tsx: This container has to be in the layout instead of the page
   //   <Container>

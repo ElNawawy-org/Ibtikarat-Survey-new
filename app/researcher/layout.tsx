@@ -1,3 +1,5 @@
+'use client';
+import { SessionProvider } from 'next-auth/react';
 import { FC, ReactNode } from 'react';
 import { ResearcherProviders } from './_context/researcher-providers';
 
@@ -6,7 +8,11 @@ type TProps = {
 };
 
 const ResearcherLayout: FC<TProps> = ({ children }) => {
-  return <ResearcherProviders>{children}</ResearcherProviders>;
+  return (
+    <ResearcherProviders>
+      <SessionProvider>{children}</SessionProvider>
+    </ResearcherProviders>
+  );
 };
 
 export default ResearcherLayout;
